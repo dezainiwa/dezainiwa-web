@@ -1,0 +1,28 @@
+{
+  "name": "dezainiwa",
+  "version": "1.0.0",
+  "description": "Codehyouka design language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codehyouka/dezainiwa-web.git"
+  },
+  "keywords": [
+    "compt"
+  ],
+  "author": "Pein Freccs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codehyouka/dezainiwa-web/issues"
+  },
+  "homepage": "https://github.com/codehyouka/dezainiwa-web#readme",
+  "dependencies": {
+  
+  },
+  "devDependencies": {
+    
+  }
+}

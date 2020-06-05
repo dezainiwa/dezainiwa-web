@@ -1,0 +1,30 @@
+
+<!doctype html>
+<link rel="stylesheet" href="../../dist/css/dezainiwa.css"/>
+
+<script src="../../dist/compt.js"></script>
+<script src="../../dist/js/dezainiwa.js"></script>
+<body>
+<h1>Hello world</h1>
+
+<div id="body_click">
+    s
+ 
+     </div>
+<input type='file' id='test' />
+
+<div id="list"></div>
+     </body>
+<script type="text/javascript">
+ct("ready",function(){
+    ct("ext","#body_click").dcw_dropfile({url:"http://localhost/experiment/test1.php",post_variable:{"test":"test"},"height":"400px",width:"200px",title:"dGundam 21",extension_execute:function(){
+       alert("asd");
+   },event_select_change:function(e,files){
+       console.log(files);
+   },event_ajax_request:function(res){
+       console.log(res);
+   }});
+   
+});
+</script>
+ 
