@@ -1,5 +1,4 @@
 
-
 //https://www.html5rocks.com/en/tutorials/file/dndfiles/
 var scrpt_dropfile = {
     event_file_upload:function(evt,details,files){
@@ -7,6 +6,7 @@ var scrpt_dropfile = {
             try {
                 var fd = new FormData();
                 for (var i = 0, f; f = files[i]; i++) {
+                    
                     fd.append(details.file_name,f);
                     
                 }
@@ -99,8 +99,8 @@ var scrpt_dropfile = {
                  dom_sub.after(html_template_before+html_template_sub1+html_template_after).remove()//"_ct.template_value(html_template,{'file_content':html_template_sub1})")
                
              }else{
-                  var html_template_sub1 = _ct.template_value("<input type='file' id='<!= id !>'  name='<!= name !>' />",{id:details['html_name']+k,name:details['html_name']+""+(dom_main_length>1?"[]":"")});
-                 dom_sub.html(_ct.template_value(html_template,{'file_content':html_template_sub1}));
+                  var html_template_sub1 = _ct.templateValue("<input type='file' id='<!= id !>'  name='<!= name !>' />",{id:details['html_name']+k,name:details['html_name']+""+(dom_main_length>1?"[]":"")});
+                 dom_sub.html(_ct.templateValue(html_template,{'file_content':html_template_sub1}));
              }
 
         });
@@ -121,21 +121,36 @@ var scrpt_dropfile = {
          var dom_main_btn = ct$(details['file_click_event_element'] =="[default]" ?'.dcw-ext-default-dropfile-upload-btn'+uniq:details['file_click_event_element'] )
               }
           var dom_main_hidden = ct$('.dcw-ext-default-dropfile-upload-hidden'+uniq).findElem("input[type=file]")
-
+         var list_element = [];     
          dom_main_btn.click(function(){
+            list_element = [];   
+            
+            
              if(dom_main_hidden.eq(dom_main_btn.index(this)).element.length>0){
              dom_main_hidden.eq(dom_main_btn.index(this)).element[0].click()
              dom_main_hidden.eq(dom_main_btn.index(this)).change(function(e){
+                  
+                 if(_ct.indexOf(list_element,this) === -1){
                  scrpt_dropfile.handleFileSelectChange(e,details);
+                 list_element.push(this);
+                }
              });
              }
              if(details['file_click_event_element'] !="[default]"){
                  dom_main_hidden.eq(0).element[0].click()
                  dom_main_hidden.eq(0).change(function(e){
+                    if(_ct.indexOf(list_element,this) === -1){
                      scrpt_dropfile.handleFileSelectChange(e,details);
+                     list_element.push(this);
+                    }
                  });
              }
+             
+           
          })
+          
+             
+         
       
       dom_main_btn.mouseenter(function(){
        // console.log("mouseenter")
