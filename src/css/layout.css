@@ -1,0 +1,63 @@
+
+.dcw-container,.dcw-container-fix{
+    width: 100%;
+    display: block;
+}
+
+.dcw-content-divider{
+   
+}
+@media(max-width:600px){
+  
+  table.dcw.mb_scroll_tbody {display:block}
+  table.dcw.mb_scroll_tbody tbody{display:block;overflow-x:scroll;width:auto;position:relative;white-space:nowrap}
+  table.dcw.mb_scroll_tbody thead{float:left;width: calc(50% - 10%)}
+  table.dcw.mb_scroll_tbody tbody tr{display:inline-block;vertical-align:top}
+  table.dcw.mb_scroll_tbody thead th, table.dcw th{padding: 0px }
+
+  table.dcw.mb_collapse_row {width:90%}
+  table.dcw.mb_collapse_row table, 
+  table.dcw.mb_collapse_row tbody, 
+  table.dcw.mb_collapse_row th, 
+  table.dcw.mb_collapse_row td, 
+  table.dcw.mb_collapse_row tr { 
+    display: block; 
+  }
+  table.dcw.mb_collapse_row thead tr{display:none}
+
+  table.dcw.mb_collapse_row tbody tr td:before { content: attr(data-title); }
+
+  .dcw.mb_scroll_y{
+      width:100%;
+      overflow-y: auto;
+      _overflow: auto;
+      margin:0 0 1em;
+  }
+
+  /* menu */
+.dcw-mb-btn{
+    display: block;
+}
+ul.dcw-mb-menu >li:not([class=dcw-mb-btn]){
+    display: none;
+    
+}
+
+/* rows columns */
+.dcw-cols,.dcw-cols-8p,.dcw-cols-7p,.dcw-cols6p,.dcw-cols-5p,.dcw-cols-4p,.dcw-cols-3p,.dcw-cols-2p{
+   width:100%;
+}
+}
+
+/* Larger than mobile */
+@media (min-width: 100px) {}
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}

@@ -21,10 +21,13 @@ var list_package_extension_js =  [
 ];
 
 var list_package_css =  [ 
-  "src/css/dezainiwa.css",
-  "src/css/dezainiwa-custom-element.css",
-  "src/css/dezainiwa-themes-basic.css",
-  "src/css/dezainiwa-themes-extension.css",
+//    "src/css/dezainiwa.css",
+//    "src/css/dezainiwa-themes-basic.css",
+"src/css/base.css",
+"src/css/layout.css",
+//  "src/css/component/*",
+//  "src/css/content/*",
+//  "src/css/utility/*",    
   
   
   ];
