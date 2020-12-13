@@ -1,6 +1,4 @@
-html,body{height:100%}
-body {padding:0;margin: 0;position:relative;font-family: sans-serif;}
-header.dcw,footer.dcw,nav.dcw{display: block;}
+
 
 /* Table */
 table.dcw{width: 100%;table-layout: fixed;border-radius: 3px;padding: 1px;}
@@ -13,17 +11,7 @@ table.dcw tbody td{
   padding:5px; 
 }
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
+
 /* button,fields */
 .dcw-fields,span.dcw-btn,div.dcw-btn,
 button.dcw-btn,input.dcw-btn[type=file],input.dcw-btn[type=button],
@@ -154,63 +142,6 @@ ul.dcw-menu-vertical >li ul>li{
     padding: 5px;
 }
 
-/* rows columns */
-.dcw-cols,.dcw-cols-9p,.dcw-cols-8p,.dcw-cols-7p,.dcw-cols-6p,.dcw-cols-5p,.dcw-cols-4p,.dcw-cols-3p,.dcw-cols-2p,.dcw-cols-1p{
-    padding: 5px;
-    margin:1px;
-    display: inline-block;
-}
-.dcw-width-9p,.dcw-cols-9p{
-    width:90%;
-  }
-.dcw-width-8p,.dcw-cols-8p{
-  width:80%;
-}
-.dcw-width-7p,.dcw-cols-7p{
-    width:70%;
-}
-.dcw-width-6p,.dcw-cols-6p{
-width:60%;
-}
-.dcw-width-5p , .dcw-cols-5p{
-width:50%;
-}
-.dcw-width-4p , .dcw-cols-4p{
-width:40%;
-}
-.dcw-width-3p , .dcw-cols-3p{
-width:30%;
-}
-.dcw-width-2p , .dcw-cols-2p{
-width:20%;
-}
-.dcw-width-1p , .dcw-cols-1p{
-    width:10%;
-    }
-.dcw-width{
-    width:100%;
-  }    
-.dcw-cols{
-    
-    -webkit-flex-basis: 0;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%;
-}
-/* container */
-
-.dcw-container,.dcw-container-fix{
-    width: 100%;
-    display: block;
-}
-
-.dcw-content-divider{
-   
-}
 @media(max-width:600px){
   
   table.dcw.mb_scroll_tbody {display:block}
@@ -253,17 +184,3 @@ ul.dcw-mb-menu >li:not([class=dcw-mb-btn]){
 }
 }
 
-/* Larger than mobile */
-@media (min-width: 100px) {}
-@media (min-width: 400px) {}
-
-/* Larger than phablet */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
