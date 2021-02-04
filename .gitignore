@@ -1,3 +1,6 @@
 node_modules/
 dist/
 labs/
+task/
+src - Copy/
+package-lock.json

@@ -1,0 +1,8 @@
+@import "../helper/core";
+
+  /* container */
+.#{$framework-shortcode}-container,.#{$framework-shortcode}-container-fix{
+    width: 100%;
+    display: block;
+    
+}

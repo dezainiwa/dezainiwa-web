@@ -1,0 +1,22 @@
+@import "../helper/core";
+@import "../mixins/row_cols";
+
+/* columns */
+@for $var from 1 through $cols-len {
+    .#{$framework-shortcode}-cols-#{$var} {
+      width: ($var / $cols-len)*100%;
+      @include template-cols;
+    }
+}
+
+ 
+
+.#{$framework-shortcode}-rows {
+  @include template-rows;
+}
+
+
+  .#{$framework-shortcode}-cols{
+    @include template-cols;
+    max-width: 100%;
+  }

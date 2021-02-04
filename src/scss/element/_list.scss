@@ -1,0 +1,11 @@
+@import "../helper/core";
+
+ul.#{$framework-shortcode}-list-group{
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li.#{$framework-shortcode}-list-inline{
+  display: inline;
+}

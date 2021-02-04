@@ -1,0 +1,107 @@
+@import "../helper/core";
+/* button,fields */
+.#{$framework-shortcode}-fields,span.#{$framework-shortcode}-button,div.#{$framework-shortcode}-button,button.#{$framework-shortcode}-button,input.#{$framework-shortcode}-button[type=file],input.#{$framework-shortcode}-button[type=button],
+input.#{$framework-shortcode}-button[type=submit],input.#{$framework-shortcode}-button[type=reset]{
+
+    padding: 5px;
+    border-radius: 5px;
+}
+/* button */
+.#{$framework-shortcode}-button-text{
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent !important;
+    border: 0px solid transparent !important;
+
+    
+}
+
+div.#{$framework-shortcode}-button{
+    display: inline-block;
+    
+}
+
+span.#{$framework-shortcode}-button,div.#{$framework-shortcode}-button{
+
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    appearance: push-button;
+    user-select: none;
+    white-space: inherit;
+    rtl-ordering: logical;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+   
+    margin: 0em;
+    font: 13.3333px Arial;
+    writing-mode: horizontal-tb;
+}
+/* link */
+.#{$framework-shortcode}-link{
+    text-decoration: none;
+    margin:1px 4px;
+}
+
+
+
+
+
+
+/**Button **/
+span.dcw-button a:visited,span.dcw-button a:active,div.dcw-button a:visited,div.dcw-button a:active{
+    color: rgb(72,72,72);
+  }
+  input.dcw-button[type=file], input.dcw-button[type=button], input.dcw-button[type=submit], input.dcw-button[type=reset] {
+       
+      border:1px solid #ccc;
+  }
+  a.dcw-link:hover,span.dcw-button a:hover,div.dcw-button:hover,span.dcw-button:hover, div.dcw-button:hover, button.dcw-button:hover, input.dcw-button[type=file]:hover, input.dcw-button[type=button]:hover, input.dcw-button[type=submit]:hover, input.dcw-button[type=reset]:hover{
+      /**color: #4a9ec7;**/
+      
+      box-shadow: 0px 1px 5px #000;
+  }
+  
+   span.dcw-button, div.dcw-button, button.dcw-button, input.dcw-button[type=file], input.dcw-button[type=button], input.dcw-button[type=submit], input.dcw-button[type=reset] {
+  
+     /** box-shadow: 0px 1px 2px grey; **/
+     outline-color:  #eee;
+     box-shadow: 0px 0px 3px #000;
+      cursor: pointer;
+  }
+  .dcw-button-text{
+       
+      box-shadow: 0px 0px 0px !important;
+      
+  }
+  .dcw-button-text:hover{
+       
+      /**text-decoration:underline **/
+      text-shadow: 1px 1px 8px #000;
+      
+  }
+  .dcw-button:active{
+       
+      color:gray
+      
+  }
+  .dcw-button-text:active{
+       
+      color:gray
+      
+  }
+  
+   span.dcw-button:active,div.dcw-button:active{
+     /** border: 1px solid orange; **/
+     box-shadow:0px 1px 1px 1px #000 inset;
+     outline-color:  #eee;
+    
+     
+      /** color:gray **/
+  }

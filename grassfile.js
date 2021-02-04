@@ -20,82 +20,34 @@ var list_package_extension_js =  [
   
 ];
 
-var list_package_css =  [ 
-//    "src/css/dezainiwa.css",
-//    "src/css/dezainiwa-themes-basic.css",
-"src/css/base.css",
-"src/css/layout.css",
-//  "src/css/component/*",
-//  "src/css/content/*",
-//  "src/css/utility/*",    
-  
-  
-  ];
-  
+var list_full_css =  [ 
 
+"src/scss/base/_default_web.scss",
+"src/scss/base/_default_root.scss",
+"src/scss/element/*.scss",
+
+];
 
 
 exports.module=function(grassconf){   
 var grass_concat = grassconf.require("grass_concat")
-var grass_composer = grassconf.require("grass_composer");
+var grass_sass = grassconf.require("grass_sass");
 
-        grassconf.load("js",function(){
-                    
-          return grassconf.src(list_package_js)
-            .pipe(grass_composer( {
-              "banner":{
-                  "header":"(function(window){ \n" +
-                  " /** \n" +
-                  " /* This program was writtern by pein freccs. \n" +
-                  " /* Please check my repository for more details and update \n" +
-                  " /* https://github.com/compts/dezainiwa \n"+
-                  " **/ \n",
-                  "footer":"\n })(window);"
-              }
-            } ) )
-        .pipe(grass_concat(__dirname+"/dist/js/dezainiwa.js",{
-          istruncate:true
-        }) );
+        grassconf.load("full_css",function(_){
 
-
-        })
-        grassconf.load("js_ext",function(){
-            
-              return grassconf.src(list_package_extension_js)
-                .pipe(grass_composer( {
-                  "banner":{
-                      "header":"(function(window){ \n" +
-                      " /** \n" +
-                      " /* This program was writtern by pein freccs. \n" +
-                      " /* Please check my repository for more details and update \n" +
-                      " /* https://github.com/compts/dezainiwa \n"+
-                      " **/ \n",
-                      "footer":"\n })(window);"
-                  }
-                } ) )
-            .pipe(grass_concat(__dirname+"/dist/js/dezainiwa-extension.js",{
-              istruncate:true
-             }) );
-            
-
-        })
-
-        grassconf.load("css",function(test){
-
-          
-              return grassconf.src(list_package_css)
-            .pipe(grass_concat(__dirname+"/dist/css/dezainiwa.css",{
+              return grassconf.src(list_full_css)
+             .pipe(grass_sass({}))
+           .pipe(grass_concat(__dirname+"/dist/css/dezainiwa_full.css",{
               istruncate:true
              }) );
         });
- } 
+ }
 
 exports.execute=function( lib ){   
   lib.default=function(strm){
-    strm.series("js").series("js_ext").series("css");
+    strm.series("full_css");
   }
-   
-     
- return lib;    
-}       
-  
+
+ return lib;
+}
+

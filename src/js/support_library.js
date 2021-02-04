@@ -1,3 +1,0 @@
-var supporting_library = {
-
-}

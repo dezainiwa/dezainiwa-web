@@ -1,0 +1,9 @@
+@import "../helper/core";
+
+table.#{$framework-shortcode}{width: 100%;table-layout: fixed;border-radius: 3px;padding: 1px;}
+table.#{$framework-shortcode} thead tr > th, table.#{$framework-shortcode} thead > th{width: 1px;
+    white-space: nowrap;overflow: hidden}
+table.#{$framework-shortcode} thead th, table.#{$framework-shortcode} th{padding: 5px}
+table.#{$framework-shortcode} tbody td{
+  padding:5px; 
+}
