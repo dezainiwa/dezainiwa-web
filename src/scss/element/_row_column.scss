@@ -3,7 +3,7 @@
 
 /* columns */
 @for $var from 1 through $cols-len {
-    .#{$framework-shortcode}-cols-#{$var} {
+    .cols-#{$var} {
       width: ($var / $cols-len)*100%;
       @include template-cols;
     }
@@ -11,12 +11,12 @@
 
  
 
-.#{$framework-shortcode}-rows {
+.rows {
   @include template-rows;
 }
 
 
-  .#{$framework-shortcode}-cols{
+  .cols{
     @include template-cols;
     max-width: 100%;
   }

@@ -25,6 +25,8 @@ var list_full_css =  [
 "src/scss/base/_default_web.scss",
 "src/scss/base/_default_root.scss",
 "src/scss/element/*.scss",
+"src/scss/utility/*.scss",
+"src/scss/theme/default/*.scss",
 
 ];
 

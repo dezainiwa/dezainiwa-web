@@ -1,0 +1,74 @@
+@import "../helper/core";
+
+@mixin container-media($width,$suffix) {
+    
+    .container#{$suffix}{
+        width:#{$width};
+    }
+    
+  }
+
+
+@mixin container-media-list($properties,$duration) {
+    
+    $props: ();
+
+    @each $p in $properties {
+        @if $p == standard{
+            $props: append($props, '.container', comma);
+        }
+        @else{
+            $props: append($props, '.container-#{$p}', comma);
+        }
+       
+    }
+
+    #{$props} {
+        width:$duration;
+        position:relative; 
+        display:block;
+    }
+    
+  }
+
+
+@mixin media-query($type) {
+
+    @if $type==xs{
+     @media(min-width:$screen-width-xs){
+         @content;
+     }
+    }
+
+    @if $type==sm{
+        @media(min-width:$screen-width-sm){
+            @content;
+        }
+       }
+
+    @if $type==md{
+        @media(min-width:$screen-width-md){
+            @content;
+        }
+    }
+
+    @if $type==lg{
+        @media(min-width:$screen-width-lg){
+            @content;
+        }
+    }
+
+    @if $type==xl{
+        @media(min-width:$screen-width-xl){
+            @content;
+        }
+    }
+
+    @if $type==xxl{
+        @media(min-width:$screen-width-xxl){
+            @content;
+        }
+    }
+
+ }
+
