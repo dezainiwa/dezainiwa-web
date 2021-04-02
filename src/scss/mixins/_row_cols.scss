@@ -6,7 +6,9 @@
     flex-wrap: wrap;
   }
 
-@mixin template-cols {
+@mixin template-cols($value) {
+
+  @if  $value != 12{
     -webkit-flex-basis: 0;
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -14,4 +16,6 @@
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+  }
+    
   }

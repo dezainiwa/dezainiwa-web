@@ -2,54 +2,53 @@
 
 
 /**Button **/
-span.dcw-button a:visited,span.dcw-button a:active,div.dcw-button a:visited,div.dcw-button a:active{
+span.button a:visited,span.button a:active,div.button a:visited,div.button a:active{
     color: rgb(72,72,72);
   }
-  input.dcw-button[type=file], input.dcw-button[type=button], input.dcw-button[type=submit], input.dcw-button[type=reset] {
+input.button[type=file], input.button[type=button], input.button[type=submit], input.button[type=reset] {
        
       border:1px solid #ccc;
   }
-  a.dcw-link:hover,span.dcw-button a:hover,div.dcw-button:hover,span.dcw-button:hover, div.dcw-button:hover, button.dcw-button:hover, input.dcw-button[type=file]:hover, input.dcw-button[type=button]:hover, input.dcw-button[type=submit]:hover, input.dcw-button[type=reset]:hover{
+a.button,span.button a:hover,div.button:hover,span.button:hover, div.button:hover, button.button:hover, input.button[type=file]:hover, input.button[type=button]:hover, input.button[type=submit]:hover, input.button[type=reset]:hover{
       /**color: #4a9ec7;**/
       
-      box-shadow: 0px 1px 5px #000;
+      box-shadow: 0px 0px 3px #000;
   }
   
-   span.dcw-button, div.dcw-button, button.dcw-button, input.dcw-button[type=file], input.dcw-button[type=button], input.dcw-button[type=submit], input.dcw-button[type=reset] {
+a.button,span.button, div.button, button.button, input.button[type=file], input.button[type=button], input.button[type=submit], input.button[type=reset] {
   
      /** box-shadow: 0px 1px 2px grey; **/
      outline-color:  #eee;
      box-shadow: 0px 0px 3px #000;
       cursor: pointer;
   }
-  .dcw-button-text{
+.button-text{
        
       box-shadow: 0px 0px 0px !important;
       
   }
-  .dcw-button-text:hover{
+  a.link:hover,.button-text:hover{
        
       /**text-decoration:underline **/
       text-shadow: 1px 1px 8px #000;
       
   }
-  .dcw-button:active{
+.button:active{
        
       color:gray
       
   }
-  .dcw-button-text:active{
+.button-text:active{
        
       color:gray
       
   }
   
-   span.dcw-button:active,div.dcw-button:active{
+a.button,  span.button:active,div.button:active{
      /** border: 1px solid orange; **/
      box-shadow:0px 1px 1px 1px #000 inset;
      outline-color:  #eee;
     
      
       /** color:gray **/
-  }
-  
+ }

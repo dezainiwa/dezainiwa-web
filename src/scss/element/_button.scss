@@ -1,10 +1,10 @@
 @import "../helper/core";
 /* button,fields */
-.fields,span.button,div.button,button.button,input.button[type=file],input.button[type=button],
+.fields,a.button,span.button,div.button,button.button,input.button[type=file],input.button[type=button],
 input.button[type=submit],input.button[type=reset]{
 
-    padding: 5px;
-    border-radius: 5px;
+    padding: $default-padding;
+    border-radius: $default-border-radius;
 }
 /* button */
 .button-text{
@@ -21,7 +21,7 @@ div.button{
     
 }
 
-span.button,div.button{
+a.button,span.button,div.button{
 
     align-items: flex-start;
     text-align: center;
@@ -44,7 +44,7 @@ span.button,div.button{
     writing-mode: horizontal-tb;
 }
 /* link */
-.link{
+a.button,.link{
     text-decoration: none;
     margin:1px 4px;
 }

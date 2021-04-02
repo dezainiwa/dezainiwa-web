@@ -3,7 +3,7 @@
 @mixin container-media($width,$suffix) {
     
     .container#{$suffix}{
-        width:#{$width};
+        width:#{$width} !important;
     }
     
   }
@@ -32,7 +32,7 @@
   }
 
 
-@mixin media-query($type) {
+@mixin min-media-query($type) {
 
     @if $type==xs{
      @media(min-width:$screen-width-xs){
@@ -72,3 +72,83 @@
 
  }
 
+ @mixin max-media-query($type) {
+
+    @if $type==xs{
+     @media(max-width:$screen-width-xs){
+         @content;
+     }
+    }
+
+    @if $type==sm{
+        @media(max-width:$screen-width-sm){
+            @content;
+        }
+       }
+
+    @if $type==md{
+        @media(max-width:$screen-width-md){
+            @content;
+        }
+    }
+
+    @if $type==lg{
+        @media(max-width:$screen-width-lg){
+            @content;
+        }
+    }
+
+    @if $type==xl{
+        @media(max-width:$screen-width-xl){
+            @content;
+        }
+    }
+
+    @if $type==xxl{
+        @media(max-width:$screen-width-xxl){
+            @content;
+        }
+    }
+
+ }
+
+
+ @mixin between-media-query($type) {
+
+    @if $type==xs{
+     @media(max-width:$screen-width-xs){
+         @content;
+     }
+    }
+
+    @if $type==sm{
+        @media (min-width:$screen-width-xs + 1) and (max-width:$screen-width-sm){
+            @content;
+        }
+       }
+
+    @if $type==md{
+        @media(min-width:$screen-width-sm + 1) and (max-width:$screen-width-md){
+            @content;
+        }
+    }
+
+    @if $type==lg{
+        @media(min-width:$screen-width-md + 1 ) and (max-width:$screen-width-lg) {
+            @content;
+        }
+    }
+
+    @if $type==xl{
+        @media(min-width:$screen-width-lg + 1) and (max-width:$screen-width-xl) {
+            @content;
+        }
+    }
+
+    @if $type==xxl{
+        @media(min-width:$screen-width-xxl){
+            @content;
+        }
+    }
+
+ }
