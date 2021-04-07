@@ -18,6 +18,11 @@
   "bugs": {
     "url": "https://github.com/codehyouka/dezainiwa-web/issues"
   },
+  "style": "dist/css/dezainiwa-web.css",
+  "sass": "src/scss/dezainiwa-web.scss",
+  "main": "dist/js/dezainiwa-web-es6.js",
   "homepage": "https://github.com/codehyouka/dezainiwa-web#readme",
-  "devDependencies": {}
+  "devDependencies": {
+
+  }
 }

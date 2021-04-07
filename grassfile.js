@@ -39,7 +39,7 @@ var grass_sass = grassconf.require("grass_sass");
 
               return grassconf.src(list_full_css)
              .pipe(grass_sass({}))
-           .pipe(grass_concat(__dirname+"/dist/css/dezainiwa_full.css",{
+           .pipe(grass_concat(__dirname+"/dist/css/dezainiwa.css",{
               istruncate:true
              }) );
         });
