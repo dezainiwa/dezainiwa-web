@@ -3,27 +3,26 @@
 
 @import "../mixins/align";
 
-.align-container{
-    clear:both;
+.align-container {
+  clear: both;
 }
 
-@include align-media('');
-@include max-media-query(xs){
-    @include align-media('-xs');
+@include align-media("");
+@include max-media-query(xs) {
+  @include align-media("-xs");
 }
-@include between-media-query(sm){
-    @include align-media('-sm');
+@include between-media-query(sm) {
+  @include align-media("-sm");
 }
-@include between-media-query(md){
-    @include align-media('-md');
+@include between-media-query(md) {
+  @include align-media("-md");
 }
-@include between-media-query(lg){
-    @include align-media('-lg');
+@include between-media-query(lg) {
+  @include align-media("-lg");
 }
-@include between-media-query(xl){
-    @include align-media('-xl');
+@include between-media-query(xl) {
+  @include align-media("-xl");
 }
-@include between-media-query(xxl){
-    @include align-media('-xxl');
-}  
-
+@include between-media-query(xxl) {
+  @include align-media("-xxl");
+}

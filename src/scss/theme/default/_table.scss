@@ -1,59 +1,96 @@
 @import "../../helper/core";
 @import "../../mixins/grid_query";
 
-
-
-$border-odd-color:#ccc;
-$border-event-color:#aaa;
-
-
+$border-odd-color: #efecec;
+$border-event-color: #afacac;
 
 /* Table */
-table.dcw{border:1px solid #ccc}
-table.dcw thead{border:1px solid #ccc;background-color:#3082b2;color: #eee}
-table.dcw tbody{border:1px solid #ccc}
-table.dcw tbody td{border-bottom:1px solid #ccc;border-left:1px solid #ccc}
-table.dcw.zebra_vertical tbody  tr td:nth-child(odd){border:1px solid $border-odd-color;background-color:$border-odd-color}
-table.dcw.zebra_vertical tbody  tr td:nth-child(even){border:1px solid $border-event-color;background-color:$border-event-color;}
+table.table {
+  border: 1px solid #ccc;
+}
+table.table thead {
+  border: 1px solid #ccc;
+  background-color: #3082b2;
+  color: #eee;
+}
+table.table tbody {
+  border: 1px solid #ccc;
+}
+table.table tbody td {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+table.table.zebra_vertical tbody tr td:nth-child(odd) {
+  border: 1px solid $border-odd-color;
+  background-color: $border-odd-color;
+}
+table.table.zebra_vertical tbody tr td:nth-child(even) {
+  border: 1px solid $border-event-color;
+  background-color: $border-event-color;
+}
 
+table.table.zebra_horizontal tbody tr:nth-child(odd) td {
+  border: 1px solid $border-odd-color;
+  background-color: $border-odd-color;
+}
+table.table.zebra_horizontal tbody tr:nth-child(even) td {
+  border: 1px solid $border-event-color;
+  background-color: $border-event-color;
+}
 
-table.dcw.zebra_horizontal tbody  tr:nth-child(odd) td{border:1px solid $border-odd-color;background-color:$border-odd-color}
-table.dcw.zebra_horizontal tbody  tr:nth-child(even) td{border:1px solid $border-event-color;background-color:$border-event-color}
+@include max-media-query(xs) {
+  table.mb_scroll_tbody tbody {
+    display: block;
+    overflow-x: scroll;
+    width: auto;
+    position: relative;
+    white-space: nowrap;
+  }
+  table.mb_scroll_tbody thead {
+    float: left;
+    width: calc(50% - 10%);
+  }
+  table.mb_scroll_tbody thead tr th {
+    display: block;
+    margin: 1px;
+    border-bottom: 1px dotted #fff;
+  }
+  table.mb_scroll_tbody tbody tr td {
+    height: 20px;
+    display: block;
+    margin: 1px;
+    padding: 5px;
+    border-bottom: 1px dotted #fff;
+  }
 
+  table.mb_collapse_row tr {
+    border: 1px solid #ccc;
+  }
 
-@include max-media-query(xs){ 
+  table.mb_collapse_row tbody tr td {
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 35%;
+    white-space: normal;
+    text-align: left;
+    width: auto;
+    height: 100%;
+  }
 
-    table.mb_scroll_tbody tbody{display:block;overflow-x:scroll;width:auto;position:relative;white-space:nowrap}
-	table.mb_scroll_tbody thead{float:left;width: calc(50% - 10%)}
-	table.mb_scroll_tbody thead tr th{display:block;margin:1px;border-bottom:1px dotted #fff;}
-	table.mb_scroll_tbody tbody tr td{height:20px;display:block;margin:1px;padding:5px;border-bottom:1px dotted #fff;}
-	
-	table.mb_collapse_row tr { border: 1px solid #ccc; }
-    
-	table.mb_collapse_row tbody tr td { 		
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 35%; 
-		white-space: normal;
-		text-align:left;
-		width: auto; 
-		height:100%
-	}
- 		
-		table.mb_collapse_row tbody tr td:before { 
-		position: absolute;
-		background-color:#3082b2;
-		color:#fff;
-		border-top:1px solid #eee;
-		top: 0px;
-		left: 0px;
-		width: 30%; 
-		padding-right: 10px; 
-		padding:5px;
-		white-space: nowrap;
-		word-wrap:break-word;
-		text-align:left;
-		font-weight: bold;
-		height:100%
-	}
+  table.mb_collapse_row tbody tr td:before {
+    position: absolute;
+    background-color: #3082b2;
+    color: #fff;
+    border-top: 1px solid #eee;
+    top: 0px;
+    left: 0px;
+    width: 30%;
+    padding-right: 10px;
+    padding: 5px;
+    white-space: nowrap;
+    word-wrap: break-word;
+    text-align: left;
+    font-weight: bold;
+    height: 100%;
+  }
 }

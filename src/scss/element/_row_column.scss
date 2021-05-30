@@ -3,65 +3,63 @@
 @import "../mixins/grid_query";
 
 /* columns */
-@for $var from 1 through $cols-len   {
-    .cols-#{$var} {
-      width: ($var / $cols-len)*100%;
+@for $var from 1 through $cols-len {
+  .cols-#{$var} {
+    width: ($var / $cols-len) * 100%;
+    @include template-cols($var);
+  }
+
+  @include max-media-query(xs) {
+    .cols-xs-#{$var} {
+      width: ($var / $cols-len) * 100%;
       @include template-cols($var);
     }
+  }
 
-    @include max-media-query(xs){
-      .cols-xs-#{$var} {
-        width: ($var / $cols-len)*100%;
-        @include template-cols($var);
-      }
+  @include min-media-query(sm) {
+    .cols-sm-#{$var} {
+      width: ($var / $cols-len) * 100%;
+      @include template-cols($var);
     }
-   
-    @include min-media-query(sm){
-     
-      .cols-sm-#{$var} {
-        width: ($var / $cols-len)*100%;
-        @include template-cols($var);
-      }
+  }
+  @include min-media-query(md) {
+    .cols-md-#{$var} {
+      width: ($var / $cols-len) * 100%;
+      @include template-cols($var);
     }
-    @include min-media-query(md){
-      .cols-md-#{$var} {
-        width: ($var / $cols-len)*100%;
-        @include template-cols($var);
-      }
-    
+  }
+  @include min-media-query(lg) {
+    .cols-lg-#{$var} {
+      width: ($var / $cols-len) * 100%;
+      @include template-cols($var);
     }
-    @include min-media-query(lg){
-    
-      .cols-lg-#{$var} {
-        width: ($var / $cols-len)*100%;
-        @include template-cols($var);
-      }
+  }
+  @include min-media-query(xl) {
+    .cols-xl-#{$var} {
+      width: ($var / $cols-len) * 100%;
+      @include template-cols($var);
     }
-    @include min-media-query(xl){
-      .cols-xl-#{$var} {
-        width: ($var / $cols-len)*100%;
-        @include template-cols($var);
-      }
-     
+  }
+  @include min-media-query(xxl) {
+    .cols-xxl-#{$var} {
+      width: ($var / $cols-len) * 100%;
+      @include template-cols($var);
     }
-    @include min-media-query(xxl){
-      
-      .cols-xxl-#{$var} {
-        width: ($var / $cols-len)*100%;
-        @include template-cols($var);
-      }
-    }  
+  }
 }
 
-
- 
-
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-left: calc(var(--gutter-padding) / 2);
+  padding-right: calc(var(--gutter-padding) / 2);
+}
 .rows {
   @include template-rows;
 }
 
-
-.cols{
+.cols {
   @include template-cols(0);
   max-width: 100%;
 }

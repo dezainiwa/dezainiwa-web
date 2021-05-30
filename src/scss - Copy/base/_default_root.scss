@@ -1,0 +1,27 @@
+@import "../helper/core";
+:root {
+    --#{$framework-shortcode}-blue: #0d6efd;
+    --#{$framework-shortcode}-indigo: #6610f2;
+    --#{$framework-shortcode}-purple: #6f42c1;
+    --#{$framework-shortcode}-pink: #d63384;
+    --#{$framework-shortcode}-red: #dc3545;
+    --#{$framework-shortcode}-orange: #fd7e14;
+    --#{$framework-shortcode}-yellow: #ffc107;
+    --#{$framework-shortcode}-green: #198754;
+    --#{$framework-shortcode}-teal: #20c997;
+    --#{$framework-shortcode}-cyan: #0dcaf0;
+    --#{$framework-shortcode}-white: #fff;
+    --#{$framework-shortcode}-gray: #6c757d;
+    --#{$framework-shortcode}-gray-dark: #343a40;
+    --#{$framework-shortcode}-primary: #0d6efd;
+    --#{$framework-shortcode}-secondary: #6c757d;
+    --#{$framework-shortcode}-success: #198754;
+    --#{$framework-shortcode}-info: #0dcaf0;
+    --#{$framework-shortcode}-warning: #ffc107;
+    --#{$framework-shortcode}-danger: #dc3545;
+    --#{$framework-shortcode}-light: #f8f9fa;
+    --#{$framework-shortcode}-dark: #212529;
+    --#{$framework-shortcode}-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --#{$framework-shortcode}-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --#{$framework-shortcode}-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  }

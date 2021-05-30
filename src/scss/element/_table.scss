@@ -1,32 +1,65 @@
 @import "../helper/core";
 @import "../mixins/grid_query";
 
-table{width: 100%;table-layout: fixed;border-radius: 3px;padding: 1px;}
-table thead tr > th, table thead > th{width: 1px;
-    white-space: nowrap;overflow: hidden}
-table thead th, table th{padding: 5px}
-table tbody td{
-  padding:5px; 
+table.table {
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 3px;
+  padding: 1px;
+}
+table.table thead tr > th,
+table.table thead > th {
+  width: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+table.table thead th,
+table th {
+  padding: 5px;
+}
+table.table tbody td {
+  padding: 5px;
 }
 
-
-@include max-media-query(xs){ 
-
-  table.mb_scroll_tbody {display:block}
-  table.mb_scroll_tbody tbody{display:block;overflow-x:scroll;width:auto;position:relative;white-space:nowrap}
-  table.mb_scroll_tbody thead{float:left;width: calc(50% - 10%)}
-  table.mb_scroll_tbody tbody tr{display:inline-block;vertical-align:top}
-  table.mb_scroll_tbody thead th, table th{padding: 0px }
-
-  table.mb_collapse_row {width:90%}
-  table.mb_collapse_row table, 
-  table.mb_collapse_row tbody, 
-  table.mb_collapse_row th, 
-  table.mb_collapse_row td, 
-  table.mb_collapse_row tr { 
-    display: block; 
+@include max-media-query(xs) {
+  table.mb_scroll_tbody {
+    display: block;
   }
-  table.mb_collapse_row thead tr{display:none}
+  table.mb_scroll_tbody tbody {
+    display: block;
+    overflow-x: scroll;
+    width: auto;
+    position: relative;
+    white-space: nowrap;
+  }
+  table.mb_scroll_tbody thead {
+    float: left;
+    width: calc(50% - 10%);
+  }
+  table.mb_scroll_tbody tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  table.mb_scroll_tbody thead th,
+  table th {
+    padding: 0px;
+  }
 
-  table.mb_collapse_row tbody tr td:before { content: attr(data-title); }
+  table.mb_collapse_row {
+    width: 90%;
+  }
+  table.mb_collapse_row table,
+  table.mb_collapse_row tbody,
+  table.mb_collapse_row th,
+  table.mb_collapse_row td,
+  table.mb_collapse_row tr {
+    display: block;
+  }
+  table.mb_collapse_row thead tr {
+    display: none;
+  }
+
+  table.mb_collapse_row tbody tr td:before {
+    content: attr(data-title);
+  }
 }

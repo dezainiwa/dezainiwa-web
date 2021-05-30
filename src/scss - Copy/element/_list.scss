@@ -1,0 +1,10 @@
+@import "../helper/core";
+
+ul.list-group{
+    list-style-type: none;
+    padding: 0;
+}
+
+li.list-inline{
+  display: inline;
+}

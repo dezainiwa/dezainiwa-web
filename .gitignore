@@ -2,5 +2,6 @@ node_modules/
 dist/
 labs/
 task/
-src - Copy/
+src-Copy/
 package-lock.json
+ 

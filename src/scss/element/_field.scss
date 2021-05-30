@@ -1,34 +1,27 @@
 @import "../helper/core";
 
 /**Field **/
-select.fields{
-	background-color: #fff;
+
+.fields:not([type="radio"]):not([type="checkbox"]):not(select) {
+  -moz-box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+  display: block;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: large;
 }
-
- 
-.fields:not([type=radio]):not([type=checkbox]):not(select){
-
--moz-box-shadow: inset 1px 0px 3px -1px rgba(0,0,0,0.75);
--moz-box-shadow: inset 1px 0px 3px -1px rgba(0,0,0,0.75);
-box-shadow: inset 1px 0px 3px -1px rgba(0,0,0,0.75);
-display: block;
-line-height: 1.5;
-color: #495057;
-background-color: #fff;
-background-clip: padding-box;
-border: 1px solid #ced4da;
-
-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-font-size: large;
+.fields:disabled {
+  background-color: #eee !important;
+  outline-color: #cccc;
+  box-shadow: 0px 0px 0px #cccc !important;
 }
-.fields:disabled{
-	background-color: #eee !important;
-	outline-color:  #cccc;
-	box-shadow: 0px 0px 0px #cccc !important;
-}
-.fields:not([type=radio]):not([type=checkbox]):focus{
-	box-shadow: 0px 4px 10px #ddd !important;
-	outline-color:  #4a9ec7;
-	
-
+.fields:not([type="radio"]):not([type="checkbox"]):focus {
+  box-shadow: 0px 4px 10px #ddd !important;
+  outline-color: #4a9ec7;
 }

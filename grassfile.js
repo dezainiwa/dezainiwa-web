@@ -35,19 +35,44 @@ exports.module=function(grassconf){
 var grass_concat = grassconf.require("grass_concat")
 var grass_sass = grassconf.require("grass_sass");
 
-        grassconf.load("full_css",function(_){
+  grassconf.load("full_css",function(_){
 
-              return grassconf.src(list_full_css)
-             .pipe(grass_sass({}))
-           .pipe(grass_concat(__dirname+"/dist/css/dezainiwa_full.css",{
-              istruncate:true
-             }) );
-        });
- }
+    return grassconf.src(list_full_css)
+      .pipe(grass_sass({}))
+      .pipe(grass_concat(__dirname+"/dist/css/dezainiwa_full.css",{
+        istruncate:true
+        }) );
+    });
+
+    grassconf.load("inline_scss_import",function(_){
+
+      return grassconf.src(list_full_css)
+        .pipe( 
+          grassconf.streamPipe( function( data ){
+           
+            var data_update_path = data.path.replace(/(src[\/\\]scss[\/\\])/g,function(s,s1){  
+              return "";
+            }).replace(/([\/\\])/g,"/");
+            
+            var data_update_path_split =  data_update_path.split("/");
+
+            data_update_path_split[data_update_path_split.length -1] = data_update_path_split[data_update_path_split.length -1].replace(/(^_)/g,"")
+           
+            data.writeData('@import "'+data_update_path_split.join("/")+'";\n');
+            data.done();
+          } )
+        )
+        .pipe(grass_concat(__dirname+"/src/scss/_index.scss",{
+          istruncate:true
+          }));
+      });
+
+}
 
 exports.execute=function( lib ){   
   lib.default=function(strm){
     strm.series("full_css");
+    strm.series("inline_scss_import");
   }
 
  return lib;

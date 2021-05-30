@@ -1,0 +1,6 @@
+@import "../../mixins/colors_selection";
+
+@include button-color-background("blue",blue,white);
+@include button-color-background("gray",gray,white);
+@include button-color-background("red",red,white);
+@include button-color-background("yellow",yellow,black);

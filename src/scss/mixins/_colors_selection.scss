@@ -1,0 +1,60 @@
+@mixin button-color-background($class_suffix,$color_bg,$color_text) {
+    
+    a.button.color-bg-#{$class_suffix},
+    span.button.color-bg-#{$class_suffix},
+    div.button.color-bg-#{$class_suffix},
+    button.button.color-bg-#{$class_suffix},
+    input.button[type="file"].color-bg-#{$class_suffix},
+    input.button[type="button"].color-bg-#{$class_suffix},
+    input.button[type="submit"].color-bg-#{$class_suffix},
+    input.button[type="reset"].color-bg-#{$class_suffix}{
+      background-color: $color_bg ;
+      border: 1px solid $color_bg;
+      font-weight: bold;
+      color: $color_text;
+    }
+
+    a.button.color-outline-#{$class_suffix},
+    span.button.color-outline-#{$class_suffix},
+    div.button.color-outline-#{$class_suffix},
+    button.button.color-outline-#{$class_suffix},
+    input.button[type="file"].color-outline-#{$class_suffix},
+    input.button[type="button"].color-outline-#{$class_suffix},
+    input.button[type="submit"].color-outline-#{$class_suffix},
+    input.button[type="reset"].color-outline-#{$class_suffix}{
+      border: 1px solid $color_bg;
+      color: $color_bg  !important;
+    }
+
+
+    table.table.color-bg-#{$class_suffix} thead {
+      border: 1px solid #ccc;
+      background-color: $color_bg !important;
+      color: $color_text  !important;
+    }
+
+    table.table.color-outline-#{$class_suffix}{
+      border: 1px solid $color_bg;
+       
+    }
+
+    .cards-header.color-bg-#{$class_suffix} {
+      background-color: $color_bg  !important;
+      color: $color_text  !important;
+    }
+
+    .color-bg-#{$class_suffix}{
+      background-color: $color_bg  !important;
+      font-weight: bold;
+     
+    }
+
+    .color-outline-#{$class_suffix} {
+
+      border: 1px solid #{$color_bg};
+      color: $color_text !important;
+
+    }
+
+}
+ 

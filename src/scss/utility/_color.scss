@@ -1,0 +1,10 @@
+@import "../helper/color";
+@import "../helper/core";
+
+.green{
+    color:#{$green}
+}
+
+.blue{
+    color: var(--dcw-blue)
+}
