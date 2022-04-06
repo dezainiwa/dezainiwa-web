@@ -1,17 +1,21 @@
 {
   "name": "dezainiwa",
   "version": "2.0.0",
-  "description": "Codehyouka design language",
-  "main": "index.js",
+  "description": "Codehyouka design framework",
+  "main": "dist/node.cjs.js",
+  "module": "dist/node.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "es_linter": "eslint dist/*.js test/*/*/*.js src/*/*/*.js src/core/*.js   --fix",
+    "test_esm": "mocha -r esm test/esm/dom/*.test.js",
+    "test": "echo \"Error: no test specified haha\" && exit 1",
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codehyouka/dezainiwa-web.git"
   },
   "keywords": [
-    "compt"
+    "dezainiwa"
   ],
   "author": "Pein Freccs",
   "license": "MIT",
@@ -19,5 +23,16 @@
     "url": "https://github.com/codehyouka/dezainiwa-web/issues"
   },
   "homepage": "https://github.com/codehyouka/dezainiwa-web#readme",
-  "devDependencies": {}
+  "dependencies": {
+    "structkit": "^1.3.1",
+    "comptsjs": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "esm": "^3.2.25",
+    "jsdom": "^16.6.0",
+    "mocha": "^5.2.0"
+  }
 }

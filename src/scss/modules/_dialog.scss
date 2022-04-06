@@ -1,0 +1,53 @@
+/**
+*dialog
+*/
+
+	.dcw-ext-default-dialog-box{
+		border:1px solid #ccc;	
+		position:fixed;
+		z-index:9917;
+		background-color:#fff;
+	 	box-shadow: 0px 2px 3px grey;
+		 z-index:9999;
+	}
+	.dcw-ext-default-dialog-box .dcw-ext-default-title{
+		border-bottom:1px solid #aaa;
+		cursor:move;
+		background-color: #3082b2;
+		
+	}
+	.dcw-ext-default-dialog-box .dcw-body{
+		padding:5px;
+		overflow:auto;
+		height:70%;
+	}
+	.dcw-ext-default-dialog-box .dcw-footer{
+		float:right;
+		padding: 5px;
+	}
+	.dcw-ext-default-dialog-event-title{
+		box-shadow: 0px 1px 1px grey;
+		padding: 5px;
+	}
+	.dcw-ext-default-dialog-event-close{
+		font-weight:bolder;
+		float:right;
+		font-size:15px; 
+	}
+	.dcw-ext-default-dialog-event-title,.dcw-ext-default-dialog-event-close{
+		display:inline-block;
+		
+		color:#fff;
+	}
+
+	.dcw-ext-default-dialog-event-close{
+		
+		cursor: default;
+	}
+
+	.dcw-ext-default-dialog-box-background{
+		position:absolute;
+		z-index:9988;
+		background-color:rgba(0,0,0,.5);
+	}
+	

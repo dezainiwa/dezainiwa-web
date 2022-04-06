@@ -1,0 +1,21 @@
+.dcw-ext-default-snackbar-box{
+	position:fixed;
+	z-index:9989;
+	border:1px solid #aaa;
+	padding: 5px;
+	background-color:#fff;
+}
+.dcw-ext-default-snackbar-event-content{
+
+	padding: 3px;
+}
+.dcw-ext-default-snackbar-event-close{
+	border:1px solid #888;
+	padding: 1px;
+	font-weight:bolder;
+	float:right;
+	font-size:15px; 
+}
+.dcw-ext-default-snackbar-event-content,.dcw-ext-default-snackbar-event-close {
+	display:inline-block;
+}

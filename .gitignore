@@ -5,4 +5,5 @@ task/
 src-Copy/
 src/scss-Copy/
 package-lock.json
- 
+.DS_Store
+src/.DS_Store
