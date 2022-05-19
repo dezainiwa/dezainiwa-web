@@ -14,11 +14,14 @@
     standard],
     $screen-width-xs - 10px
   );
+  
+}
+
+@include max-media-query(xs) {
   .container-inline {
     display: inline-block;
   }
 }
-
 @include min-media-query(sm) {
   @include container-media-list(
     [sm,
@@ -29,10 +32,14 @@
     standard],
     $screen-width-sm - 10px
   );
+}
+
+@include max-media-query(sm) {
   .container-inline {
     display: inline-block;
   }
 }
+
 @include min-media-query(md) {
   @include container-media-list(
     [md,
@@ -42,6 +49,12 @@
     standard],
     $screen-width-md - 10px
   );
+}
+
+@include max-media-query(md) {
+  .container-inline {
+    display: inline-block;
+  }
 }
 @include min-media-query(lg) {
   @include container-media-list(
