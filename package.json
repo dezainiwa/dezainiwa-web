@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Codehyouka design framework",
   "module": "src/js/module/node.es.js",
+  "types": "dist/ts/module/node.es.d.ts",
   "scripts": {
     "es_linter": "eslint dist/*.js test/*/*/*.js src/*/*/*.js src/core/*.js   --fix",
     "test_esm": "mocha -r esm test/esm/dom/*.test.js",
@@ -23,10 +24,12 @@
   },
   "homepage": "https://github.com/codehyouka/dezainiwa-web#readme",
   "dependencies": {
+    "tsd": "^0.19.1",
     "structkit": "^1.3.1",
     "comptsjs": "^2.0.1"
   },
   "devDependencies": {
+    "@types/node": "^17.0.22",
     "eslint": "^7.16.0",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-plugin-import": "^2.22.1",
