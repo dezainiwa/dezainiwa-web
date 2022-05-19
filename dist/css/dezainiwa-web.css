@@ -279,97 +279,6 @@ a.button,
 .link {
   text-decoration: none;
   margin: 1px 4px; }
-.cards {
-  border-radius: 5px;
-  margin: 5px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word; }
-
-.cards-header {
-  border-top-left-radius: 5px;
-  padding: 5px;
-  font-weight: bold; }
-
-.cards-body {
-  padding: 5px;
-  margin: 5px; }
-/**Field **/
-.fields:not([type="radio"]):not([type="checkbox"]):not(select) {
-  -moz-box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
-  display: block;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  font-size: large; }
-
-.fields:disabled {
-  background-color: #eee !important;
-  outline-color: #cccc;
-  box-shadow: 0px 0px 0px #cccc !important; }
-
-.fields:not([type="radio"]):not([type="checkbox"]):focus {
-  box-shadow: 0px 4px 10px #ddd !important;
-  outline-color: #4a9ec7; }
-.container-fluid {
-  width: 100%;
-  position: relative;
-  display: block; }
-
-@media (max-width: 580px) {
-  .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .container {
-    width: 570px;
-    position: relative;
-    display: block; }
-  .container-inline {
-    display: inline-block; } }
-
-@media (min-width: 640px) {
-  .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .container {
-    width: 630px;
-    position: relative;
-    display: block; }
-  .container-inline {
-    display: inline-block; } }
-
-@media (min-width: 720px) {
-  .container-md, .container-lg, .container-xl, .container-xxl, .container {
-    width: 710px;
-    position: relative;
-    display: block; } }
-
-@media (min-width: 1024px) {
-  .container-lg, .container-xl, .container-xxl, .container {
-    width: 1014px;
-    position: relative;
-    display: block; } }
-
-@media (min-width: 1280px) {
-  .container-xl, .container-xxl, .container {
-    width: 1270px;
-    position: relative;
-    display: block; } }
-
-@media (min-width: 1580px) {
-  .container-xxl, .container {
-    width: 1570px;
-    position: relative;
-    display: block; } }
-
-.container-inline {
-  display: inline-block; }
 /* dropdown */
 select.dropdown {
   background-color: #fff; }
@@ -409,6 +318,83 @@ select.dropdown:focus {
 select.dropdown:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000; }
+/**Field **/
+.fields:not([type="radio"]):not([type="checkbox"]):not(select) {
+  -moz-box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+  display: block;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: large; }
+
+.fields:disabled {
+  background-color: #eee !important;
+  outline-color: #cccc;
+  box-shadow: 0px 0px 0px #cccc !important; }
+
+.fields:not([type="radio"]):not([type="checkbox"]):focus {
+  box-shadow: 0px 4px 10px #ddd !important;
+  outline-color: #4a9ec7; }
+.container-fluid {
+  width: 100%;
+  position: relative;
+  display: block; }
+
+@media (max-width: 580px) {
+  .container-xs, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .container {
+    width: 570px;
+    position: relative;
+    display: block; } }
+
+@media (max-width: 580px) {
+  .container-inline {
+    display: inline-block; } }
+
+@media (min-width: 640px) {
+  .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .container {
+    width: 630px;
+    position: relative;
+    display: block; } }
+
+@media (max-width: 640px) {
+  .container-inline {
+    display: inline-block; } }
+
+@media (min-width: 720px) {
+  .container-md, .container-lg, .container-xl, .container-xxl, .container {
+    width: 710px;
+    position: relative;
+    display: block; } }
+
+@media (max-width: 720px) {
+  .container-inline {
+    display: inline-block; } }
+
+@media (min-width: 1024px) {
+  .container-lg, .container-xl, .container-xxl, .container {
+    width: 1014px;
+    position: relative;
+    display: block; } }
+
+@media (min-width: 1280px) {
+  .container-xl, .container-xxl, .container {
+    width: 1270px;
+    position: relative;
+    display: block; } }
+
+@media (min-width: 1580px) {
+  .container-xxl, .container {
+    width: 1570px;
+    position: relative;
+    display: block; } }
+
+.container-inline {
+  display: inline-block; }
 ul.list-group {
   list-style-type: none;
   padding: 0; }
@@ -1599,6 +1585,28 @@ table.table tbody td {
     display: none; }
   table.mb_collapse_row tbody tr td:before {
     content: attr(data-title); } }
+.cards {
+  border-radius: 5px;
+  margin: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word; }
+
+.cards-header {
+  border-top-left-radius: 5px;
+  padding: 5px;
+  font-weight: bold; }
+
+.cards-body {
+  padding: 5px;
+  margin: 5px; }
 .green {
   color: green; }
 
@@ -1733,16 +1741,6 @@ div.button:active {
   box-shadow: 0px 1px 1px 1px #000 inset;
   outline-color: #eee;
   /** color:gray **/ }
-.cards {
-  background-color: #fff;
-  border: 1px solid #ccc; }
-
-.cards-header {
-  background-color: #ccc;
-  color: #fff; }
-
-.cards-body {
-  background-color: #fff; }
 a.button.color-bg-blue,
 span.button.color-bg-blue,
 div.button.color-bg-blue,
@@ -1918,6 +1916,16 @@ table.table.color-outline-yellow {
 .color-outline-yellow {
   border: 1px solid yellow;
   color: black !important; }
+.cards {
+  background-color: #fff;
+  border: 1px solid #ccc; }
+
+.cards-header {
+  background-color: #ccc;
+  color: #fff; }
+
+.cards-body {
+  background-color: #fff; }
 h1,
 h2,
 h3,
