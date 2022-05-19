@@ -2,8 +2,7 @@
   "name": "dezainiwa",
   "version": "2.0.0",
   "description": "Codehyouka design framework",
-  "main": "dist/node.cjs.js",
-  "module": "dist/node.es.js",
+  "module": "src/js/module/node.es.js",
   "scripts": {
     "es_linter": "eslint dist/*.js test/*/*/*.js src/*/*/*.js src/core/*.js   --fix",
     "test_esm": "mocha -r esm test/esm/dom/*.test.js",
