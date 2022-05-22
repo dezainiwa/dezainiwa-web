@@ -1,5 +1,3 @@
-(function(global){
-global.dzw={}
 
 var configSnackbar = {
     "extension_execute":function(){},
@@ -50,6 +48,13 @@ function drawer (config) {
 
 }
 dzw.drawer=drawer;
+
+function lazyLoad (config) {
+
+    var details=_stk.varExtend(configLazyLoad,config);
+
+}
+dzw.lazyLoad=lazyLoad;
 
 var support_skylabel = {
     "position_label":function(glb){
@@ -121,13 +126,8 @@ function snackbar (config) {
 //https://github.com/dezainiwa/dezainiwa-web/blob/master/src/js/ext_skybox.js
 dzw.snackbar=snackbar;
 
-function lazyLoad (config) {
-
-    var details=_stk.varExtend(configLazyLoad,config);
-
-}
-dzw.lazyLoad=lazyLoad;
-
+})(typeof window !== "undefined" ? window : this);(function(global){
+global.dzw={}
 var supporting_library = {
 
     
@@ -308,4 +308,3 @@ function dialog (config) {
 }
 dzw.dialog=dialog;
 
-})(typeof window !== "undefined" ? window : this);
